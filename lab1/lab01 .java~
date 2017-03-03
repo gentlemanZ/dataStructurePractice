@@ -1,0 +1,28 @@
+Problem 1:
+(i)
+ A B + C D + *
+  
+(ii)
+ A B C + * D *
+  
+(iii)
+ A B * C D + + E G + *
+  
+(iv)
+ A B + C + A B C * + *
+Problem 2:
+  
+  after all the steps, the result is 19
+ 
+Problem 3:
+ if we put a sequence like
+  3 + 2 3 4 + + +
+ the stack will underflow from the second step, because when we meet the first postfix
+  "+", there is only one number in the stack:3. The code will .pop()twice,but there is 
+  only one number in the stack. Then it will underflow.
+
+Problem 4:
+if we have already have 
+  
+Problem 5:
+  

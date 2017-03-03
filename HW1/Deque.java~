@@ -1,0 +1,7 @@
+public interface Deque{
+  public int nextSlot();
+  public void enqueue(int k);
+  public int dequeue();
+  public int size();
+  public boolean isEmpty();
+}

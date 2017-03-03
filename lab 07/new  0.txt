@@ -1,0 +1,14 @@
+insertHelper(Node t , Node p , int key){
+	if(t == null){
+		new (key,p);
+		}
+		else if ()
+		t.left = insertHelper(t.left,key);
+	}
+
+set up a counter for the method, it will increase every time we visit the node.then we have three cases
+
+count= 1 go to left 
+count=2 go to right
+count=3 got to the parent
+using a counter to do the tree traverse.

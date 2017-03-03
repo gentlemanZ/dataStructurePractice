@@ -1,0 +1,51 @@
+Problem one:
+s == v and s == x returns true under the == version of equality.
+s.equals(v),s.equals(w),s.equals(x) returns true under the .equals() version of equality.
+the v and w behave differently because == and .equals() take different approch to compare values to
+String S. == need anything in the string to be the exact same as in the S. Since v is assigned to s, so
+they have the same string under one piece of memory. x has the exact same string that s have. That is 
+why they are true under both condition. w is different. It kind of cut the first 7 index from t. So it
+only have the same structure,but different content. That is why it is only true under the .equals()version
+of equality.
+
+Problem two:
+(i)
+"aaron"
+"aaron"
+"able"
+"ben"
+"benjamin"
+
+(ii)
+s.compareTo(t) should return -1
+s.compareTo(u) should return 1
+s.compareTo(v) should return 1
+t.compareTo(w) should return 0
+v.compareTo(s) should return -1
+u.compareTo(v) should return -5
+
+
+
+(iii)
+s.compareto("hello") >=0;
+t.compareTo(u) !=0;
+u.compareTo("noway") >0;
+
+(iv)
+In compareTo(),If the strings have the same length the compare is based on the unicode value of each character in the strings.
+Character sequence is compared lexicographically to the character sequence represented by
+the argument string. After all, we subtract the Unicode value of the character by the 
+Unicode vlue of the character that is on the same index of the argument string. Then we 
+add all the results together to get the final result:a number. For example,"hello".compareTo("hallo")
+should return 4, because for the index 0 they both have "h" the subtraction of two Unicode
+value should give us 0.On the index first. "hello" has "e" while "hallo" has "a". we 
+subtract the Unicode value of "e" with the Unicode value of "a". we get 4. then for both
+second and third index, they have the same "l", the same for the last index. So, we add
+0+4+0+0+0. we get 4. If the two strings have different length, it will subtract the first length by
+the second length and return the result.
+
+
+
+
+problem3:
+

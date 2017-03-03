@@ -1,0 +1,30 @@
+for lab08:
+Exercise One:
+1.which hash functions performed better:
+first let's check the St Dev Bucket length of each hash function:
+silly: 69.374
+Naive Add:4.231
+Naive Mult 4.686
+Add Lin Cong: 4.231
+Sequential Lc:4.479
+Folding:4.299
+Java HashCode:4.589
+Seq Java Hash code:4.430.
+for the data i put in.
+we can see that Naive Add and Add Lin cong are the best two hash function.
+Folding is the second better hash function we get.
+2.Did you need the "industrial-strength" hash functions near the end of the list:
+No, the Java HashCode and Seq Java Hash code are not the best hash functions in
+the list(for the data i choosed). they are not in the first three places.
+3.Which was the simplest hash function to do reasonably well:
+it is the Naive Add. it is on the second place in the list, but gives us the best
+performence.
+
+exercise two:
+1.What do you observe:
+under the same Talbe size, prime nmubers work better than the
+the normal number(like 12). Also, when the prime number get bigger
+the hash function's performence will get better.
+2.
+
+exercise three:

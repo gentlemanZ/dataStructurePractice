@@ -1,0 +1,80 @@
+/* File: QueueClient.java
+ * Date: 1/28/14
+ * Author:  Wayne Snyder (snyder@bu.edu)
+ * Class: CS 112, Fall 2014
+ * Purpose: Example of integer queue represented by a ring buffer
+ */
+
+public class QueueClient {
+   
+   static private final int SIZE = 10; 
+   static private int [] A = new int[SIZE]; 
+   static private int size = 0;                      // number of elements stored in array, NOT size of array
+   static private int front = 0; 
+   static private int next = 0;  
+   
+   // gives next index in array which wraps around in a ring; moves clockwise through indices
+   static private int nextSlot(int k) { 
+      return ((k + 1) % A.length); 
+   } 
+   
+   // enqueue in next slot clockwise around the ring
+   static private void enqueue(int n) { 
+      if(size != A.length) {              // do nothing if full
+         A[next] = n; 
+         next = nextSlot(next); 
+         ++size;  
+      }
+      
+   } 
+   
+   // dequeue and move front pointer clockwise; can underflow without warning and produce error elements
+   static private int dequeue() { 
+      int temp = A[front]; 
+      front = nextSlot(front);  
+      --size;  
+      return temp; 
+   } 
+   
+   // just a wrapper for private value size
+   static private int size() { 
+      return size; 
+   }  
+   
+   // standard utility for data structures
+   static private boolean isEmpty() { 
+      return (size == 0); 
+   } 
+   
+   public static void main(String [] args) {
+      
+      System.out.println("\nShould print out:\n3  4  5  6  7  8  9  10  11  12:"); 
+      
+
+      enqueue(1); 
+      enqueue(2);
+      enqueue(3);
+      
+      dequeue();
+      dequeue(); 
+      
+      enqueue(4); 
+      enqueue(5);  
+      enqueue(6);
+      enqueue(7);
+      enqueue(8);  
+      enqueue(9);
+      enqueue(10); 
+      enqueue(11); 
+      enqueue(12); 
+      
+      
+      while( !isEmpty() ) {
+         System.out.print( dequeue() + "  "); 
+      }
+      System.out.println(); 
+      
+      
+   } 
+   
+}
